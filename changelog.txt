@@ -1,0 +1,23 @@
+2.0.0: Initial public release!
+        + Spam Filtering! Including Constructs' Spam!
+        + Failure viewing! Such as Account in Use, Character is Dead!
+        + Block current offer! No more annoying packages!
+        + Simple settings!
+          Configurate the tool in the way you want!
+        + Helpful Commands!
+            /roll
+            Want to check your roll? Too lazy to use Muledump or Realmeye? Use /roll to check your roll!
+            /lock <player name>, /unlock <player name>
+                Want to lock some nice people, but have your player list full? Use /lock to lock your target!
+            /tp
+                Too lazy to type out /teleport? Use /tp instead!
+        + Helpful Hooks!
+            Highlight vault (Default enabled):
+                Lost in vault, trying to find empty chest? Look for the indicators added under the chests!
+            Server (Default enabled):
+                Want to check which region server and realm you're in? Don't want to ask Mr.Eyeball? This will add the regional server to /server command output!
+        + Information Window!
+            Connection:
+                Show your server and realm name! And a 'Force Disconnect' button in case of emergency!
+            Latency:
+                Show your connection quality!

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{80CF522D-0DA4-4192-8D22-137C6035D26A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RotmgTool</RootNamespace>
+    <AssemblyName>RotmgTool</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\CommandBase.cs" />
+    <Compile Include="Commands\CommandManager.cs" />
+    <Compile Include="Commands\Lock.cs" />
+    <Compile Include="Commands\Roll.cs" />
+    <Compile Include="Commands\Tp.cs" />
+    <Compile Include="Handler\HttpHandler.cs" />
+    <Compile Include="Handler\SocketHandler.cs" />
+    <Compile Include="Hooks\HookBase.cs" />
+    <Compile Include="Hooks\HookManager.cs" />
+    <Compile Include="Hooks\Server.cs" />
+    <Compile Include="Hooks\VaultHighlight.cs" />
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Network\NBufferReader.cs" />
+    <Compile Include="Proxy\HttpProxy.cs" />
+    <Compile Include="Proxy\SWFAnalyzer.cs" />
+    <Compile Include="Proxy\SwfPatcher.cs" />
+    <Compile Include="UI\Connection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\InfoWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Latency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\WindowManager.cs" />
+    <Compile Include="World\Entity.cs" />
+    <Compile Include="World\GameWorld.cs" />
+    <Compile Include="IToolInstance.cs" />
+    <Compile Include="Network\DataTypes.cs" />
+    <Compile Include="Network\NReader.cs" />
+    <Compile Include="Network\NWriter.cs" />
+    <Compile Include="Network\Packets.cs" />
+    <Compile Include="Network\PacketTable.cs" />
+    <Compile Include="Network\PolicyServer.cs" />
+    <Compile Include="Network\RC4.cs" />
+    <Compile Include="Network\RemoteServer.cs" />
+    <Compile Include="Network\SocketProxy.cs" />
+    <Compile Include="Network\SocketProxyWorker.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleJson.cs" />
+    <Compile Include="SimpleSettings.cs" />
+    <Compile Include="SpamFilter.cs" />
+    <Compile Include="SWF\ABCFile.cs" />
+    <Compile Include="SWF\ABCReader.cs" />
+    <Compile Include="SWF\ABCWriter.cs" />
+    <Compile Include="SWF\SwfFile.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="XmlData.cs" />
+    <Compile Include="Zlib.cs" />
+    <EmbeddedResource Include="matrix.dat" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="settings.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

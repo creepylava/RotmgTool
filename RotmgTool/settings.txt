@@ -1,0 +1,8 @@
+﻿proxy.host:127.0.0.7
+proxy.port:2000
+spam.log:true
+spam.0starspam:false
+spam.randomname:true
+hook.death.enabled:true
+hook.hlvault.enabled:true
+ui.balloon:true

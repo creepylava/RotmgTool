@@ -1,0 +1,14 @@
+﻿# filter words, no spaces, punctuation
+OryxGC
+MMOCRIT
+ORYXIN
+NonMysticAttacks
+---
+# replace table of strings, no duplicated key is allowed
+# '#' is comment token and cannot be replaced
+| I
+3 e
+4 a
+0 o
+() o
+l I
