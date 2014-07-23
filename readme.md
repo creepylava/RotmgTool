@@ -8,11 +8,14 @@ See changelog.txt for details
 
 Usage
 -----
-For Windows users, just double click it and run! (Require .NET Framework 4.0) 
+For Windows users, just double click it and run! (Require .NET Framework 4.0)
+
 For Linux/Mac users, you need to install Mono. I tested on Ubuntu and 
-`apt-get install mono-complete` can install all dependencies. 
+`apt-get install mono-complete` can install all dependencies.
+
 You'll also need to run `mozroots --import --sync` to ensure proper HTTPS 
-connection. 
+connection.
+
 Remember to run as administrator/sudo! 
 
 License
@@ -42,6 +45,8 @@ SOFTWARE.
 
 Credit
 ------
-SWF R/W is ported from rabcdasm. 
-Edit distance function is copied from http://blogs.msdn.com/b/toub/archive/2006/05/05/590814.aspx 
-Random name filter is ported from https://github.com/rrenaud/Gibberish-Detector 
+SWF R/W is ported from rabcdasm.
+
+Edit distance function is copied from http://blogs.msdn.com/b/toub/archive/2006/05/05/590814.aspx
+
+Random name filter is ported from https://github.com/rrenaud/Gibberish-Detector
