@@ -159,7 +159,7 @@ namespace RotmgTool
 
 			AppendLog("Retrieving server list...");
 			var doc =
-				XDocument.Load("http://realmofthemadgod.appspot.com/char/list?guid=" +
+				XDocument.Load("http://realmofthemadgodhrd.appspot.com/char/list?guid=" +
 				               Guid.NewGuid().ToString().Replace("-", "").ToUpper());
 			byte id = 1;
 			Servers = doc.XPathSelectElements("//Server").Select(srv => new RemoteServer

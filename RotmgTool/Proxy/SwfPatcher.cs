@@ -37,7 +37,7 @@ namespace RotmgTool.Proxy
 						{
 							if (file.strings[i] == "www.realmofthemadgod.com")
 								file.strings[i] = targetHostWithPort;
-							else if (file.strings[i] == "realmofthemadgod.appspot.com")
+							else if (file.strings[i] == "realmofthemadgodhrd.appspot.com")
 								file.strings[i] = targetHostWithPort;
 							else if (file.strings[i] == "rotmg_loader_port")
 							{
@@ -60,7 +60,7 @@ namespace RotmgTool.Proxy
 								file.strings[i] = targetHost;
 								stringRef = i;
 							}
-							else if (file.strings[i] == "realmofthemadgod.appspot.com")
+							else if (file.strings[i] == "realmofthemadgodhrd.appspot.com")
 								file.strings[i] = targetHostWithPort;
 							else if (file.strings[i] == "xlate.kabam.com")
 								// Not necessary, but prevent the background 'Play at' text from appearing.

@@ -9,6 +9,7 @@ namespace RotmgTool.Network
 		public string Guid;
 		public uint Rand1;
 		public string Password;
+		public uint Rand2;
 		public string Secret;
 		public uint KeyTime;
 		public byte[] Key;
@@ -27,6 +28,7 @@ namespace RotmgTool.Network
 			ret.Guid = reader.ReadUTF();
 			ret.Rand1 = reader.ReadUInt32();
 			ret.Password = reader.ReadUTF();
+			ret.Rand2 = reader.ReadUInt32();
 			ret.Secret = reader.ReadUTF();
 			ret.KeyTime = reader.ReadUInt32();
 			ret.Key = reader.ReadBytes(reader.ReadUInt16());
@@ -46,6 +48,7 @@ namespace RotmgTool.Network
 			writer.WriteUTF(Guid);
 			writer.Write(Rand1);
 			writer.WriteUTF(Password);
+			writer.Write(Rand2);
 			writer.WriteUTF(Secret);
 			writer.Write(KeyTime);
 			writer.Write((short)Key.Length);

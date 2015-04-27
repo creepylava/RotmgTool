@@ -83,7 +83,7 @@ namespace RotmgTool.Proxy
 				{
 					// redirect
 					var client = new WebClient();
-					var ver = client.DownloadString("http://realmofthemadgod.appspot.com/version.txt");
+					var ver = client.DownloadString("http://realmofthemadgodhrd.appspot.com/version.txt");
 					ctx.Response.Redirect("AGCLoader" + ver + ".swf");
 				}
 				else if (loaderPattern.IsMatch(ctx.Request.Url.LocalPath))
@@ -91,7 +91,7 @@ namespace RotmgTool.Proxy
 					// patch loader
 					tool.AppendLog("Retrieving AGCLoader...");
 					var client = new WebClient();
-					var swf = client.DownloadData("http://realmofthemadgod.appspot.com/" + ctx.Request.Url.LocalPath);
+					var swf = client.DownloadData("http://realmofthemadgodhrd.appspot.com/" + ctx.Request.Url.LocalPath);
 					long ts = long.Parse(loaderPattern.Match(ctx.Request.Url.LocalPath).Groups[1].Value);
 
 					long t = Environment.TickCount;
@@ -113,7 +113,7 @@ namespace RotmgTool.Proxy
 						// patch client
 						tool.AppendLog("Retrieving Game Client...");
 						var client = new WebClient();
-						swf = client.DownloadData("http://realmofthemadgod.appspot.com/" + ctx.Request.Url.LocalPath);
+						swf = client.DownloadData("http://realmofthemadgodhrd.appspot.com/" + ctx.Request.Url.LocalPath);
 						long ts = long.Parse(agcPattern.Match(ctx.Request.Url.LocalPath).Groups[1].Value);
 						long t = Environment.TickCount;
 						patcher.Patch(ts, ref swf, false);
@@ -134,7 +134,7 @@ namespace RotmgTool.Proxy
 				{
 					// redirection
 					var newUri = new UriBuilder(ctx.Request.Url);
-					newUri.Host = "realmofthemadgod.appspot.com";
+					newUri.Host = "realmofthemadgodhrd.appspot.com";
 					newUri.Scheme = "http";
 					newUri.Port = 80;
 					ctx.Response.Redirect(newUri.Uri.ToString());
@@ -143,7 +143,7 @@ namespace RotmgTool.Proxy
 				{
 					// https
 					var newUri = new UriBuilder(ctx.Request.Url);
-					newUri.Host = "realmofthemadgod.appspot.com";
+					newUri.Host = "realmofthemadgodhrd.appspot.com";
 					newUri.Scheme = "https";
 					newUri.Port = 443;
 
